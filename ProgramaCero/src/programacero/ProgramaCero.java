@@ -36,6 +36,9 @@ public class ProgramaCero {
         System.out.println("Los datos introducidos son:");
         System.out.println(p+"\n\n");
         
+        System.out.println("¿Cuántas personas se han declarado hasta este momento (1)?");
+        System.out.println("El valor de la variable static Persona.npersonas es: " + Persona.getNpersonas());
+        
         
         int edad=0;
         alumnos[0] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", edad=0);
@@ -67,6 +70,8 @@ public class ProgramaCero {
         System.out.println(alumnos[11]);
         System.out.println(alumnos[12]);
         
+        System.out.println("¿Cuántas personas se han declarado hasta este momento (2)?");
+        System.out.println("El valor de la variable static Persona.npersonas es: " + Persona.getNpersonas());
         
         
         ArrayList<Persona> profesores = new ArrayList<Persona>();
@@ -78,11 +83,17 @@ public class ProgramaCero {
         System.out.println("Los datos de los profesores son:");
         System.out.println(profesores);
         
+        System.out.println("¿Cuántas personas se han declarado hasta este momento (3)?");
+        System.out.println("El valor de la variable static Persona.npersonas es: " + Persona.getNpersonas());
+        
+        System.out.println("Recorremos alumnos:");
+        
         //Recorremos los alumnos
         for(int i=0; i<13; i++){
             System.out.println(alumnos[i]);
         }
         
+        System.out.println("Recorremos profesores:");
         //Recorremos los profesores
         int j=0;
         while(j<profesores.size()){
@@ -90,8 +101,8 @@ public class ProgramaCero {
             j++;
         }
         
-        
-        Persona[] gente = new Persona[13+profesores.size()]; 
+        System.out.println("Recorremos gente=alumnos+profesores:");
+        Persona[] gente = new Persona[alumnos.length+profesores.size()]; 
         ArrayList<Persona> listaGente = new ArrayList<Persona>();
         int k=0, indice=0;
         do{
@@ -104,6 +115,11 @@ public class ProgramaCero {
             }
             System.out.println(gente[k]);
         } while(++k<gente.length);
+        
+        System.out.println("¿Cuántas personas se han declarado al final?");
+        System.out.println("El valor de la variable static Persona.npersonas es: " + Persona.getNpersonas());
+        System.out.println("El valor de la variable final Persona.PI es: " + Persona.PI);
+
         
         System.out.println("FIN");
     }

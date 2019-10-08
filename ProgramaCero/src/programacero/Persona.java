@@ -13,9 +13,12 @@ public class Persona {
     private String telefono;
     private String direccion;
     private int edad;
+    private static int npersonas=0;
+    public static final double PI=3.1415926;
 
     //Constructor por defecto
     public Persona() {
+        npersonas++;
     }
 
     //Constructor con argumentos
@@ -26,6 +29,7 @@ public class Persona {
         this.telefono = telefono;
         this.direccion = direccion;
         this.edad = edad;
+        npersonas++;
     }
 
     //Constructor de copia
@@ -36,6 +40,7 @@ public class Persona {
         this.telefono = p.getTelefono();
         this.direccion = p.getDireccion();
         this.edad = p.getEdad();
+        npersonas++;
     }
     
     //getters y setters
@@ -87,6 +92,14 @@ public class Persona {
         this.edad = edad;
     }
 
+    public static int getNpersonas() {
+        return npersonas;
+    }
+
+    public static void setNpersonas(int npersonas) {
+        Persona.npersonas = npersonas;
+    }
+    
     //Otros métodos propios de Persona
     
     
