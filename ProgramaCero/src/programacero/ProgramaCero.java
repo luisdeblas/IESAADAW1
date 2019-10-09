@@ -41,19 +41,19 @@ public class ProgramaCero {
         
         
         int edad=0;
-        alumnos[0] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", edad=0);
-        alumnos[1] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", edad=0);
-        alumnos[2] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", edad=0);
-        alumnos[3] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", edad=0);
-        alumnos[4] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", edad=0);
-        alumnos[5] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", edad=0);
-        alumnos[6] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", edad=0);
-        alumnos[7] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", edad=0);
-        alumnos[8] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", edad=0);
-        alumnos[9] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", edad=0);
-        alumnos[10] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", edad=0);
-        alumnos[11] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", edad=0);
-        alumnos[12] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", edad=0);
+        /*DAW101->David         */ alumnos[0] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW102->Luis          */ alumnos[1] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW104->Alberto Liñan */ alumnos[2] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW105->Aidan         */ alumnos[3] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW106->Alberto Maza  */ alumnos[4] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW107->Vindio        */ alumnos[5] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW108->Ander         */ alumnos[6] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW109->Mar           */ alumnos[7] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW110->Adrian        */ alumnos[8] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW111->Andres        */ alumnos[9] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW112->Jose Manuel   */ alumnos[10] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW113->Jairo         */ alumnos[11] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW114->Mario         */ alumnos[12] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
 
         System.out.println("Los datos de los alumnos son:");
         System.out.println(alumnos[0]);
@@ -121,7 +121,69 @@ public class ProgramaCero {
         System.out.println("El valor de la variable final Persona.PI es: " + Persona.PI);
 
         
+        char c;
+        System.out.println("Introduzca un caracter:");
+        c=in.next().charAt(0);
+        char opcion=0;
+        do{
+            System.out.println("Pulse 1 para buscar en los alumnos o 2 para buscar en los profesores:");
+            opcion= in.next().charAt(0);
+        }while(opcion!=1 && opcion!=2);
+        
+        switch(opcion){
+            case 1: buscar(c, alumnos);    break;
+            case 2: buscar(c, profesores);    break;
+            default:
+        }
+        
+        
         System.out.println("FIN");
     }
     
+    /**
+     * Recorremos el array de Personas y si el nombre contiene al caracter c, mostramos los datos de la persona por pantalla.
+     * @param c caracter a buscar en el nombre de las personas
+     * @param array array de personas donde buscar el caracter c
+     */
+    public static void buscar(char c, Persona[] array){        
+        for (Persona p : array) {
+            /* El método String.indexOf(char c) devuelve:
+            -1 si el char c NO está en el String
+            la primera posicion (indice) dentro del String en la que aparezca el char c
+            */
+            if (p.getNombre().indexOf(c) != -1) {
+                System.out.println(p);
+            } else {
+                continue;
+            }
+        }
+    }
+    
+    /**
+     * Recorremos la ArrayList de Personas y si el nombre contiene al caracter c, mostramos los datos de la persona por pantalla.
+     * @param c caracter a buscar en el nombre de las personas
+     * @param lista ArrayList de personas donde buscar el caracter c
+     */
+    public static void buscar(char c, ArrayList<Persona> lista){
+        /*
+        //Una primera forma podría ser transformar la ArrayList<Persona> en un array Persona[]
+        //y luego llamar al método buscar(char, Persona[])
+        */
+        Persona[] array = new Persona[lista.size()];
+        for(int i=0; i<lista.size(); i++){
+            array[i]=lista.get(i);
+        }
+        buscar(c,array);
+        
+        /*
+        //Otra manera más directa, buscando sobre la propia ArrayList, podría ser la siguiente:
+        for(Persona p: lista){
+            //el método String.contains(String subcadena) necesita un String subcadena a buscar, que obtenemos al concatenar el símbolo vacío "" con el caracter c a buscar
+            //devuelve TRUE si la subcadena pertenece al String o FALSE si no
+            if(p.getNombre().contains(""+c)){
+               System.out.println(p);
+            }
+        }
+        */
+    }
 }
