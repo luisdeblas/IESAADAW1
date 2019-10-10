@@ -44,7 +44,7 @@ public class ProgramaCero {
         /*DAW101->David         */ alumnos[0] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
         /*DAW102->Luis          */ alumnos[1] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
         /*DAW104->Alberto Liñan */ alumnos[2] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
-        /*DAW105->Aidan         */ alumnos[3] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW105->Aidan         */ alumnos[3] = new Persona("Aidan", "LLamosas", "9999999999999999999", "9432131421222", "Polo norte no tiene perdida.", 18);
         /*DAW106->Alberto Maza  */ alumnos[4] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
         /*DAW107->Vindio        */ alumnos[5] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
         /*DAW108->Ander         */ alumnos[6] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
@@ -139,7 +139,7 @@ public class ProgramaCero {
         
         System.out.println("FIN");
     }
-    
+    double a = Math.PI;
     /**
      * Recorremos el array de Personas y si el nombre contiene al caracter c, mostramos los datos de la persona por pantalla.
      * @param c caracter a buscar en el nombre de las personas
