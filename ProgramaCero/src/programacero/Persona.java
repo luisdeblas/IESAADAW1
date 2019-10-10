@@ -13,6 +13,7 @@ public class Persona {
     private String telefono;
     private String direccion;
     private int edad;
+    
     private static int npersonas=0;
     public static final double PI=3.1415926;
 
