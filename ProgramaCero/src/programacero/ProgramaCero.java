@@ -46,7 +46,7 @@ public class ProgramaCero {
         /*DAW104->Alberto Liñan */ alumnos[2] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
         /*DAW105->Aidan         */ alumnos[3] = new Persona("Aidan", "LLamosas", "9999999999999999999", "9432131421222", "Polo norte no tiene perdida.", 18);
         /*DAW106->Alberto Maza  */ alumnos[4] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
-        /*DAW107->Vindio        */ alumnos[5] = new Persona("Vindio", "Pérez", "12345678A", "600601602", "c/ Alta, 47", 25);
+        /*DAW107->Vindio        */ alumnos[5] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
         /*DAW108->Ander         */ alumnos[6] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
         /*DAW109->Mar           */ alumnos[7] = new Persona("Mar", "Santi", "721060L", "625958485", "Castro", 21);
         /*DAW110->Adrian        */ alumnos[8] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
@@ -124,10 +124,10 @@ public class ProgramaCero {
         char c;
         System.out.println("Introduzca un caracter:");
         c=in.next().charAt(0);
-        int opcion=0;
+        char opcion=0;
         do{
             System.out.println("Pulse 1 para buscar en los alumnos o 2 para buscar en los profesores:");
-            opcion= in.nextInt();
+            opcion= in.next().charAt(0);
         }while(opcion!=1 && opcion!=2);
         
         switch(opcion){
