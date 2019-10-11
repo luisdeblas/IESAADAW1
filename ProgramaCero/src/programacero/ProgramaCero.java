@@ -53,7 +53,7 @@ public class ProgramaCero {
         /*DAW111->Andres        */ alumnos[9] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
         /*DAW112->Jose Manuel   */ alumnos[10] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
         /*DAW113->Jairo         */ alumnos[11] = new Persona("Jairo", "Martínez", "63728492L", "655555932", "Mordor", 0);
-        /*DAW114->Mario         */ alumnos[12] = new Persona("Mario", "Sánchez", "11111111L", "612312312", "Area 52", 20);
+        /*DAW114->Mario         */ alumnos[12] = new Persona("Mario", "Sánchez Martín", "11111111L", "612312312", "Area 52", 20);
 
         System.out.println("Los datos de los alumnos son:");
         System.out.println(alumnos[0]);
