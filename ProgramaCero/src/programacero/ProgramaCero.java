@@ -42,7 +42,7 @@ public class ProgramaCero {
         
         int edad=0;
         /*DAW101->David         */ alumnos[0] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
-        /*DAW102->Luis          */ alumnos[1] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW102->Luis          */ alumnos[1] = new Persona("Luis Jose", "Fernandez Lastra", "NNIF", "Telefono", "Direccion", 21);
         /*DAW104->Alberto Liñan */ alumnos[2] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
         /*DAW105->Aidan         */ alumnos[3] = new Persona("Aidan", "LLamosas", "9999999999999999999", "9432131421222", "Polo norte no tiene perdida.", 18);
         /*DAW106->Alberto Maza  */ alumnos[4] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
