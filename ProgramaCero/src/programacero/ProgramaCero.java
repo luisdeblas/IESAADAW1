@@ -45,7 +45,7 @@ public class ProgramaCero {
         /*DAW102->Luis          */ alumnos[1] = new Persona("Luis Jose", "Fernandez Lastra", "NNIF", "Telefono", "Direccion", 21);
         /*DAW104->Alberto Liñan */ alumnos[2] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
         /*DAW105->Aidan         */ alumnos[3] = new Persona("Aidan", "LLamosas", "9999999999999999999", "9432131421222", "Polo norte no tiene perdida.", 18);
-        /*DAW106->Alberto Maza  */ alumnos[4] = new Persona("Nombre", "Apellidos", "NNIF", "Telefono", "Direccion", 0);
+        /*DAW106->Alberto Maza  */ alumnos[4] = new Persona("Alberto", "Maza", "72182921C", "613623574", "Calle la pantomima", 23);
         /*DAW107->Vindio        */ alumnos[5] = new Persona("Vindio", "Pérez Pérez", "12345678A", "600601602", "Todo recto y al final de la calle a la derecha", 25);
         /*DAW108->Ander         */ alumnos[6] = new Persona("Ander", "Rodriguez", "45915371B", "pa k kieres saber eso?jaja salu2", "C/Falsa 123", 21);
         /*DAW109->Mar           */ alumnos[7] = new Persona("Mar", "Santi", "721060L", "625958485", "Castro", 21);
