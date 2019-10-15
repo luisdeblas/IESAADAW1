@@ -54,6 +54,11 @@ public class Alumno extends Persona {
         this.cursoActual = cursoActual;
     }
 
+    @Override
+    public String toString() {
+        return super.toString()+"Alumno{" + "numExpediente=" + numExpediente + ", cursoActual=" + cursoActual + '}';
+    }
+
 
     
 }
