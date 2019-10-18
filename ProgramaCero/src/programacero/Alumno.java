@@ -15,7 +15,7 @@ public class Alumno extends Persona {
     private long numExpediente;
     private String cursoActual;
     
-
+    
     public Alumno() {
         super();
     }
@@ -54,11 +54,12 @@ public class Alumno extends Persona {
         this.cursoActual = cursoActual;
     }
 
-    @Override
+     @Override
     public String toString() {
         return super.toString()+"Alumno{" + "numExpediente=" + numExpediente + ", cursoActual=" + cursoActual + '}';
     }
 
+   
 
     
 }

@@ -217,17 +217,20 @@ public class ProgramaCero {
         
         
         //Jugamos con la clase abstracta Empleado y sus subclases Jefe y Empleado
-        System.out.println("\n\nJugamos con la clase abstracta Empleado y sus subclases Jefe y Empleado.");
+        System.out.println("\n\nJugamos con la clase abstracta Empleado y sus subclases Jefe y Becario.");
         //Las siguientes líneas son erróneas porque una clase abstracta NO se puede instanciar
-        //Empleado e = new Empleado();
-        //Empleado e = new Empleado("Nombre", 100);
+//        Empleado e = new Empleado();
+//        Empleado e1 = new Empleado("Nombre", 100);
         Empleado e;
         e = new Jefe("Jefe1", 100, 8); //El jefe1 trabaja 8 horas  a 100euros/h
         System.out.println("El empleado: " +e.getNombre() + " cobra al día: "+ e.calcularSalario());
         Jefe jefe = new Jefe((Jefe)e); //ES NECESARIO hacer un CAST EXPLICITO de Empleado a Jefe porque la clase Jefe tiene más atributos que Empleado y no hay un constructor del tipo Jefe(Empleado e)
+        
+        
         e = new Becario("Becario", 25);//El becario cobra 25euros/h
         System.out.println("El empleado: " +e.getNombre() + " cobra al día: "+ e.calcularSalario());
         Becario becario = new Becario((Becario)e); //NO es necesario un CAST de Empleado a Becario porque ya existe un constructor del tipo Becario(Empleado e)
+        
         System.out.println("Con el fin de la crisis aumentamos los pagos por hora acorde al IPC="+Empleado.IPC+"%.");
         System.out.println("\nLos salarios actualizados son:");
         jefe.aumentaPago();
@@ -240,11 +243,18 @@ public class ProgramaCero {
         System.out.println("\nLos salarios actualizados son:");
         System.out.println("El jefe "+jefe.getNombre()+" cobra al día:" + jefe.calcularSalario());
         System.out.println("El becario "+becario.getNombre()+" cobra al día:" + becario.calcularSalario());
+        
         System.out.println("El jefe tiene reunion... ($$$)");
         jefe.nuevaReunion("Balance del mes de Diciembre");
         //becario.nuevaReunion("Balance anual."); //Becario no implementa la interface Reunion
+        System.out.println("\nLos salarios actualizados son:");
+        System.out.println("El jefe "+jefe.getNombre()+" cobra al día:" + jefe.calcularSalario());
+        System.out.println("El becario "+becario.getNombre()+" cobra al día:" + becario.calcularSalario());
+        
         System.out.println("Las comisiones actuales del jefe son:");
-        jefe.getComision();
+        System.out.println(jefe.getComision());
+        System.out.println("Las comisiones actuales del becario son:");
+        System.out.println(becario.getComision());
         System.out.println("---Nominas---");
         jefe.calculaNomina();
         becario.calculaNomina();

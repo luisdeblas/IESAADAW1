@@ -45,7 +45,7 @@ public class Becario extends Empleado {
     
     //El siguiente método aLaCalle NO sobreescribe al del padre, sino que es otro distinto y ajeno
     //por lo que incluir @Override supone un error
-//    @Override
+    
 //    private void aLaCalle(){
 //        this.cesado=false; //Empleado.cesado es private por lo que NO podemos acceder desde una subclase
 //    }

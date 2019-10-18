@@ -56,7 +56,7 @@ public abstract class Empleado implements Nomina{
     }
     
     protected void nuevaComision(String comision){
-        this.comision+="\n["+this.getClass().getName()+"]"+comision;
+        this.comision += "\n["+this.getClass().getName()+"]"+comision;
         this.pagoPorHora+=1;
     }
     
